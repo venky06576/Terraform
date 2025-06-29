@@ -1,7 +1,7 @@
 resource "aws_instance" "Roboshop" {
     ami = "ami-09e6f87a47903347c"
     instance_type = "t3.micro"
-    
+    vpc_security_group_ids = aws_security_group.allow_all.id
     tags = {
 
         name="Hello World"
@@ -33,5 +33,6 @@ resource "aws_security_group" "allow_all" {
         
         
     }
+
 
 }
