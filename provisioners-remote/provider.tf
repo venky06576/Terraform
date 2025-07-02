@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "84s-venkat-remote-state"
-    key    = "provisioners-1"
+    key    = "remote-state-demo"
     region = "us-east-1"
     encrypt        = true
     use_lockfile = true
